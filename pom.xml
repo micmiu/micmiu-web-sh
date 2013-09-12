@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.micmiu.framework</groupId>
-	<artifactId>micmiu-webv1</artifactId>
+	<artifactId>micmiu-web-sh</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>micmiu-webv1</name>
-	<description>common develop framework for webapp</description>
-	<url>http://maven.apache.org</url>
+	<name>micmiu-web-sh</name>
+	<description>j2ee framework sh(springMVC Hibernate)</description>
+	<url>http://www.micmiu.com</url>
 	<developers>
 		<developer>
 			<id>Michael</id>
