@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<T_SYS_USER ID="1"  EMAIL="admin@micmiu.com" 	LOGIN_NAME="admin" 		NAME="Admin" 	PASSWORD="admin" />
+	<T_SYS_USER ID="2"  EMAIL="user@micmiu.com" 	LOGIN_NAME="user" 		NAME="User" 	PASSWORD="user" />
+	<T_SYS_USER ID="3"  EMAIL="sjsky007@gmail.com" 	LOGIN_NAME="michael" 	NAME="Michael" 	PASSWORD="michael" />
+	<T_SYS_USER ID="4"  EMAIL="user1@micmiu.com" 	LOGIN_NAME="user1" 		NAME="User1" 	PASSWORD="user1" />
+	<T_SYS_USER ID="5"  EMAIL="user5@micmiu.com" 	LOGIN_NAME="user5" 		NAME="User5" 	PASSWORD="user5" />
+	<T_SYS_USER ID="6"  EMAIL="user6@micmiu.com" 	LOGIN_NAME="user6" 		NAME="User6" 	PASSWORD="user6" />
+	<T_SYS_USER ID="7"  EMAIL="user7@micmiu.com" 	LOGIN_NAME="user7" 		NAME="User7" 	PASSWORD="user7" />
+	<T_SYS_USER ID="8"  EMAIL="user8@micmiu.com" 	LOGIN_NAME="user8" 		NAME="User8" 	PASSWORD="user8" />
+	<T_SYS_USER ID="9"  EMAIL="user9@micmiu.com" 	LOGIN_NAME="user9" 		NAME="User9" 	PASSWORD="user9" />
+	<T_SYS_USER ID="10" EMAIL="user10@micmiu.com" 	LOGIN_NAME="user10" 	NAME="User10" 	PASSWORD="user10" />
+	<T_SYS_USER ID="11" EMAIL="user11@micmiu.com" 	LOGIN_NAME="user11" 	NAME="User11" 	PASSWORD="user11" />
+	<T_SYS_USER ID="12" EMAIL="user12@micmiu.com" 	LOGIN_NAME="user12" 	NAME="User12" 	PASSWORD="user12" />
+
+	<T_SYS_ROLE ID="1" ROLE_NAME="超级管理员" />
+	<T_SYS_ROLE ID="2" ROLE_NAME="管理员" />
+	<T_SYS_ROLE ID="3" ROLE_NAME="普通用户" />
+	<T_SYS_ROLE ID="4" ROLE_NAME="demos" />
+
+	<T_SYS_U2R USER_ID="1" ROLE_ID="1" />
+	<T_SYS_U2R USER_ID="3" ROLE_ID="2" />
+	<T_SYS_U2R USER_ID="2" ROLE_ID="3" />
+	<T_SYS_U2R USER_ID="4" ROLE_ID="3" />
+	<T_SYS_U2R USER_ID="5" ROLE_ID="3" />
+	<T_SYS_U2R USER_ID="6" ROLE_ID="3" />
+	<T_SYS_U2R USER_ID="7" ROLE_ID="3" />
+	<T_SYS_U2R USER_ID="8" ROLE_ID="3" />
+	<T_SYS_U2R USER_ID="9" ROLE_ID="3" />
+	<T_SYS_U2R USER_ID="10" ROLE_ID="3" />
+	<T_SYS_U2R USER_ID="11" ROLE_ID="4" />
+	<T_SYS_U2R USER_ID="12" ROLE_ID="4" />
+	
+	<T_SYS_MENU ID="0" ORDER_NUM="0"               	  MENU_NAME="menu.index" 		ALIAS_NAME="index" 			MENU_URL="index.do" 					MENU_TYPE=""/>
+	<T_SYS_MENU ID="1" ORDER_NUM="1000"               MENU_NAME="menu.system" 		ALIAS_NAME="system" 		MENU_URL="" 							MENU_TYPE=""/>
+	<T_SYS_MENU ID="2" ORDER_NUM="1100" PARENT_ID="1" MENU_NAME="menu.system.user" 	ALIAS_NAME="user" 			MENU_URL="system/user.do?method=showList" 	MENU_TYPE=""/>
+	<T_SYS_MENU ID="3" ORDER_NUM="1200" PARENT_ID="1" MENU_NAME="menu.system.role" 	ALIAS_NAME="role" 			MENU_URL="system/role.do?method=showList" 	MENU_TYPE=""/>
+	<T_SYS_MENU ID="4" ORDER_NUM="2000"               MENU_NAME="menu.demo" 		ALIAS_NAME="demo" 			MENU_URL="" 							MENU_TYPE=""/>
+	<T_SYS_MENU ID="5" ORDER_NUM="2100" PARENT_ID="4" MENU_NAME="menu.demo.common" 	ALIAS_NAME="demo_common" 	MENU_URL="demo/index.do" 				MENU_TYPE=""/>
+	<T_SYS_MENU ID="6" ORDER_NUM="2200" PARENT_ID="4" MENU_NAME="menu.demo.crud" 	ALIAS_NAME="demo_crud" 		MENU_URL="demo/blog.do?method=showList" 	MENU_TYPE=""/>
+	
+	<T_SYS_PERMSSION ID="1"   MENU_ID="0" RES_NAME="anno" RES_CN_NAME="module.anno.index" OPERATION="read" />
+	<T_SYS_PERMSSION ID="101" MENU_ID="2" RES_NAME="user" RES_CN_NAME="module.system.user" OPERATION="read" />
+	<T_SYS_PERMSSION ID="102" MENU_ID="2" RES_NAME="user" RES_CN_NAME="module.system.user" OPERATION="update" />
+	<T_SYS_PERMSSION ID="103" MENU_ID="2" RES_NAME="user" RES_CN_NAME="module.system.user" OPERATION="create" />
+	<T_SYS_PERMSSION ID="104" MENU_ID="2" RES_NAME="user" RES_CN_NAME="module.system.user" OPERATION="delete" />
+	<T_SYS_PERMSSION ID="105" MENU_ID="2" RES_NAME="user" RES_CN_NAME="module.system.user" OPERATION="export" />
+	<T_SYS_PERMSSION ID="106" MENU_ID="2" RES_NAME="user" RES_CN_NAME="module.system.user" OPERATION="print" />
+	<T_SYS_PERMSSION ID="107" MENU_ID="3" RES_NAME="role" RES_CN_NAME="module.system.role" OPERATION="read" />
+	<T_SYS_PERMSSION ID="108" MENU_ID="3" RES_NAME="role" RES_CN_NAME="module.system.role" OPERATION="update" />
+	<T_SYS_PERMSSION ID="109" MENU_ID="3" RES_NAME="role" RES_CN_NAME="module.system.role" OPERATION="create" />
+	<T_SYS_PERMSSION ID="110" MENU_ID="3" RES_NAME="role" RES_CN_NAME="module.system.role" OPERATION="delete" />
+	<T_SYS_PERMSSION ID="111" MENU_ID="3" RES_NAME="role" RES_CN_NAME="module.system.role" OPERATION="export" />
+	<T_SYS_PERMSSION ID="112" MENU_ID="3" RES_NAME="role" RES_CN_NAME="module.system.role" OPERATION="print" />
+	<T_SYS_PERMSSION ID="121" MENU_ID="5" RES_NAME="demo_common" RES_CN_NAME="module.demo.common" OPERATION="read" />
+	<T_SYS_PERMSSION ID="122" MENU_ID="5" RES_NAME="demo_common" RES_CN_NAME="module.demo.common" OPERATION="update" />
+	<T_SYS_PERMSSION ID="123" MENU_ID="5" RES_NAME="demo_common" RES_CN_NAME="module.demo.common" OPERATION="create" />
+	<T_SYS_PERMSSION ID="124" MENU_ID="5" RES_NAME="demo_common" RES_CN_NAME="module.demo.common" OPERATION="delete" />
+	<T_SYS_PERMSSION ID="125" MENU_ID="6" RES_NAME="demo_common" RES_CN_NAME="module.demo.crud" OPERATION="read" />
+	<T_SYS_PERMSSION ID="126" MENU_ID="6" RES_NAME="demo_common" RES_CN_NAME="module.demo.crud" OPERATION="update" />
+	<T_SYS_PERMSSION ID="127" MENU_ID="6" RES_NAME="demo_common" RES_CN_NAME="module.demo.crud" OPERATION="create" />
+	<T_SYS_PERMSSION ID="128" MENU_ID="6" RES_NAME="demo_common" RES_CN_NAME="module.demo.crud" OPERATION="delete" />
+	
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="1" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="101" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="102" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="103" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="104" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="105" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="106" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="107" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="108" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="109" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="110" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="111" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="112" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="121" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="122" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="123" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="124" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="125" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="126" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="127" />
+	<T_SYS_R2P ROLE_ID="1" PERM_ID="128" />
+	
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="1" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="101" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="102" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="103" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="104" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="105" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="106" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="107" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="108" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="109" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="110" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="111" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="112" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="121" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="122" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="123" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="124" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="125" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="126" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="127" />
+	<T_SYS_R2P ROLE_ID="2" PERM_ID="128" />
+	
+	<T_SYS_R2P ROLE_ID="3" PERM_ID="1" />
+	<T_SYS_R2P ROLE_ID="3" PERM_ID="101" />
+	<T_SYS_R2P ROLE_ID="3" PERM_ID="107" />
+	<T_SYS_R2P ROLE_ID="3" PERM_ID="121" />
+	<T_SYS_R2P ROLE_ID="3" PERM_ID="125" />
+	
+	<T_SYS_R2P ROLE_ID="4" PERM_ID="1" />
+	<T_SYS_R2P ROLE_ID="4" PERM_ID="121" />
+	<T_SYS_R2P ROLE_ID="4" PERM_ID="125" />
+	
+	<T_BLOG ID="1" TITLE="spring" 		AUTHOR="michael" CATEGORY="j2ee" URL="http://www.micmiu.com/category/j2ee/" OTHER="" CREATER="michael" PUBLISH_DATE="2013-04-07"/>
+	<T_BLOG ID="2" TITLE="struts" 		AUTHOR="michael" CATEGORY="j2ee" URL="http://www.micmiu.com/category/soa/" OTHER="" CREATER="michael" PUBLISH_DATE="2013-04-07"/>
+	<T_BLOG ID="3" TITLE="hibernate" 	AUTHOR="michael" CATEGORY="j2ee" URL="http://www.micmiu.com/category/opensource/" OTHER="" CREATER="michael" PUBLISH_DATE="2013-04-07"/>
+	<T_BLOG ID="4" TITLE="shiro" 		AUTHOR="michael" CATEGORY="j2ee" URL="http://www.micmiu.com/category/nosql/" OTHER="" CREATER="michael" PUBLISH_DATE="2013-04-07"/>
+	<T_BLOG ID="5" TITLE="sso" 			AUTHOR="michael" CATEGORY="j2ee" URL="http://www.micmiu.com/category/architecture/" OTHER="" CREATER="michael" PUBLISH_DATE="2013-04-07"/>
+	<T_BLOG ID="6" TITLE="cas" 			AUTHOR="michael" CATEGORY="j2ee" URL="http://www.micmiu.com/category/lang/" OTHER="" CREATER="michael" PUBLISH_DATE="2013-04-07"/>
+
+</dataset>

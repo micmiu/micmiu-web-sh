@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE tiles-definitions PUBLIC 
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="login" extends="loginTemplate">
+		<put-attribute name="workspace" value="/WEB-INF/views/login.jsp" />
+	</definition>
+	<definition name="index" extends="defaultTemplate">
+		<put-attribute name="position" value="tiles.index" type="string" />
+		<put-attribute name="workspace" value="/WEB-INF/views/index.jsp" />
+	</definition>
+
+	<!-- user page config -->
+	<definition name="system.user.list" extends="defaultTemplate">
+		<put-attribute name="workspace"
+			value="/WEB-INF/views/system/user_list.jsp" />
+	</definition>
+	<definition name="system.user.form" extends="winTemplate">
+		<put-attribute name="workspace"
+			value="/WEB-INF/views/system/user_form.jsp" />
+	</definition>
+	<definition name="system.user.view" extends="winTemplate">
+		<put-attribute name="workspace"
+			value="/WEB-INF/views/system/user_view.jsp" />
+	</definition>
+
+	<!-- role page config -->
+	<definition name="system.role.list" extends="defaultTemplate">
+		<put-attribute name="workspace"
+			value="/WEB-INF/views/system/role_list.jsp" />
+	</definition>
+	<definition name="system.role.form" extends="winTemplate">
+		<put-attribute name="workspace"
+			value="/WEB-INF/views/system/role_form.jsp" />
+	</definition>
+	<definition name="system.role.view" extends="winTemplate">
+		<put-attribute name="workspace"
+			value="/WEB-INF/views/system/role_view.jsp" />
+	</definition>
+</tiles-definitions> 

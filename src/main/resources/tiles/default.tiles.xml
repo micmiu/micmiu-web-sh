@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE tiles-definitions PUBLIC 
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="defaultTemplate" template="/layouts/easyui/layout.jsp">
+		<put-attribute name="title" value="global.system.title" type="string" />
+		<put-attribute name="position" value="global.system.lt.workspace" type="string" />
+	</definition>
+	<definition name="loginTemplate" template="/layouts/easyui/layout.login.jsp">
+		<put-attribute name="title" value="global.system.title" type="string" />
+		<put-attribute name="position" value="global.system.title" type="string" />
+	</definition>
+	<definition name="winTemplate" template="/layouts/easyui/layout.win.jsp">
+	</definition>
+	<definition name="pageTemplate" template="/layouts/easyui/layout.page.jsp">
+	</definition>
+</tiles-definitions> 
