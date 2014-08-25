@@ -561,6 +561,7 @@
 	</properties>
 	<build>
 		<defaultGoal>compile</defaultGoal>
+        <finalName>${project.artifactId}</finalName>
 		<filters>
 			<filter>src/main/filters/filter-${env}.properties</filter>
 		</filters>
@@ -596,7 +597,9 @@
 					<webAppConfig>
 						<contextPath>/${project.artifactId}</contextPath>
 					</webAppConfig>
-				</configuration>
+                    <stopKey/>
+                    <stopPort/>
+                </configuration>
 			</plugin>
 		</plugins>
 	</build>
