@@ -36,10 +36,8 @@ public class Page {
 	/**
 	 * 构造方法
 	 * 
-	 * @param nPageSize
-	 *            每页记录数
-	 * @param nPage
-	 *            本页页号
+	 * @param pageSize 每页记录数
+	 * @param page 本页页号
 	 */
 	public Page(final int pageSize, final int page) {
 		this.pageSize = pageSize; // 每页大小
@@ -49,8 +47,7 @@ public class Page {
 	/**
 	 * 构造方法 ,默认每页20条记录
 	 * 
-	 * @param nPage
-	 *            本页页号
+	 * @param page  本页页号
 	 */
 	public Page(final int page) {
 		pageSize = DEFAULT_PAGESIZE; // 每页大小

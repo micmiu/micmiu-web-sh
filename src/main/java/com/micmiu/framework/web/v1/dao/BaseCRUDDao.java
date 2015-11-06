@@ -84,7 +84,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 	/**
 	 * 删除实体对象
 	 * 
-	 * @param entityId
+	 * @param id
 	 */
 	public void delete(ID id) {
 		T t = get(id);

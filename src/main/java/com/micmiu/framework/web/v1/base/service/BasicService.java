@@ -34,7 +34,7 @@ public interface BasicService<E, ID extends Serializable> {
 	/**
 	 * 删除实体
 	 * 
-	 * @param entity
+	 * @param id
 	 */
 	public void delete(ID id);
 
@@ -78,7 +78,7 @@ public interface BasicService<E, ID extends Serializable> {
 	/**
 	 * 分页查询
 	 * 
-	 * @param query
+	 * @param page
 	 * @return List
 	 */
 	public List<E> pageQuery(AbstractPagedQuery<E> page);
@@ -86,15 +86,17 @@ public interface BasicService<E, ID extends Serializable> {
 	/**
 	 * 按属性查找对象列表.
 	 * 
-	 * @param criterions
+	 * @param propertyName
+	 * @param value
 	 */
 
 	public List<E> findList(final String propertyName, final Object value);
 
 	/**
 	 * 按属性查找唯一的对象.
-	 * 
-	 * @param criterions
+	 *
+	 * @param propertyName
+	 * @param value
 	 */
 	public E findUnique(final String propertyName, final Object value);
 
@@ -144,7 +146,7 @@ public interface BasicService<E, ID extends Serializable> {
 	/**
 	 * 导出查询
 	 * 
-	 * @param query
+	 * @param page
 	 * @return List
 	 */
 	public List<E> exportPageQuery(AbstractPagedQuery<E> page);
