@@ -12,10 +12,9 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.util.Assert;
 
 /**
- * 
- * @author <a href="http://www.micmiu.com">Michael Sun</a>
  * @param <T>
  * @param <ID>
+ * @author <a href="http://www.micmiu.com">Michael Sun</a>
  */
 @SuppressWarnings("unchecked")
 public class BaseCRUDDao<T, ID extends Serializable> extends
@@ -36,7 +35,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 按ID返回实体对象.
-	 * 
+	 *
 	 * @param id
 	 * @return T 按返回实体。
 	 */
@@ -46,7 +45,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 查询所有的实体
-	 * 
+	 *
 	 * @param entityClass
 	 * @return
 	 */
@@ -56,7 +55,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 保存实体对象
-	 * 
+	 *
 	 * @param entity
 	 */
 	public void save(final T entity) {
@@ -65,7 +64,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 更新实体对象.
-	 * 
+	 *
 	 * @param entity
 	 */
 	public void update(T entity) {
@@ -74,7 +73,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 保存或更新实体对象.
-	 * 
+	 *
 	 * @param entity
 	 */
 	public void saveOrUpdate(T entity) {
@@ -83,7 +82,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 删除实体对象
-	 * 
+	 *
 	 * @param id
 	 */
 	public void delete(ID id) {
@@ -95,7 +94,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 删除实体对象.
-	 * 
+	 *
 	 * @param entity
 	 */
 	public void delete(final T entity) {
@@ -105,7 +104,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 按Criteria查询对象列表.
-	 * 
+	 *
 	 * @param criterions
 	 */
 
@@ -115,7 +114,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 按Criteria查询唯一对象.
-	 * 
+	 *
 	 * @param criterions
 	 */
 	public T findUnique(final Criterion... criterions) {
@@ -124,7 +123,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 根据Criterion条件创建Criteria.
-	 * 
+	 *
 	 * @param criterions
 	 */
 	private Criteria createCriteria(final Criterion... criterions) {
@@ -137,7 +136,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 按HQL查询对象列表.
-	 * 
+	 *
 	 * @param values
 	 */
 	public <X> List<X> find(final String hql, final Object... values) {
@@ -146,9 +145,8 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 按HQL查询对象列表.
-	 * 
-	 * @param values
-	 *            命名参数,按名称绑定.
+	 *
+	 * @param values 命名参数,按名称绑定.
 	 */
 	public <X> List<X> find(final String hql, final Map<String, ?> values) {
 		return createQuery(hql, values).list();
@@ -156,7 +154,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 按HQL查询唯一对象.
-	 * 
+	 *
 	 * @param values
 	 */
 	public <X> X findUnique(final String hql, final Object... values) {
@@ -165,9 +163,8 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 按HQL查询唯一对象.
-	 * 
-	 * @param values
-	 *            命名参数,按名称绑定.
+	 *
+	 * @param values 命名参数,按名称绑定.
 	 */
 	public <X> X findUnique(final String hql, final Map<String, ?> values) {
 		return (X) createQuery(hql, values).uniqueResult();
@@ -175,7 +172,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 执行HQL操作.
-	 * 
+	 *
 	 * @param values
 	 * @return 更新记录数.
 	 */
@@ -185,7 +182,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 执行HQL操作.
-	 * 
+	 *
 	 * @param values
 	 * @return 更新记录数.
 	 */
@@ -195,7 +192,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 根据查询HQL与参数列表创建Query对象.
-	 * 
+	 *
 	 * @param values
 	 */
 	private Query createQuery(final String hql, final Object... values) {
@@ -211,7 +208,7 @@ public class BaseCRUDDao<T, ID extends Serializable> extends
 
 	/**
 	 * 根据查询HQL与参数列表创建Query对象.
-	 * 
+	 *
 	 * @param values
 	 */
 	private Query createQuery(final String hql, final Map<String, ?> values) {

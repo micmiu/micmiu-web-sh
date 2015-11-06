@@ -19,10 +19,9 @@ import com.micmiu.framework.web.v1.base.dao.BasicDao;
 import com.micmiu.framework.web.v1.base.vo.AbstractPagedQuery;
 
 /**
- * 
- * @author <a href="http://www.micmiu.com">Michael Sun</a>
  * @param <T>
  * @param <ID>
+ * @author <a href="http://www.micmiu.com">Michael Sun</a>
  */
 @SuppressWarnings("unchecked")
 public abstract class BasicDaoImpl<T, ID extends Serializable> implements
@@ -51,7 +50,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 按ID返回实体对象.
-	 * 
+	 *
 	 * @param id
 	 * @return T 按返回实体。
 	 */
@@ -62,8 +61,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 查询所有的实体
-	 * 
-	 * @param clazz
+	 *
 	 * @return
 	 */
 	@Override
@@ -73,7 +71,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 保存实体对象
-	 * 
+	 *
 	 * @param entity
 	 */
 	@Override
@@ -83,7 +81,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 更新实体对象.
-	 * 
+	 *
 	 * @param entity
 	 */
 	@Override
@@ -93,7 +91,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 保存或更新实体对象.
-	 * 
+	 *
 	 * @param entity
 	 */
 	@Override
@@ -103,8 +101,8 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 删除实体对象
-	 * 
-	 * @param entityId
+	 *
+	 * @param id
 	 */
 	@Override
 	public void delete(ID id) {
@@ -117,7 +115,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 删除实体对象.
-	 * 
+	 *
 	 * @param entity
 	 */
 	@Override
@@ -128,8 +126,8 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 分页查询
-	 * 
-	 * @param query
+	 *
+	 * @param page
 	 * @return List<T> 返回分页查询结果
 	 */
 	public List<T> pageQuery(AbstractPagedQuery<T> page) {
@@ -174,7 +172,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 按HQL查询对象列表.
-	 * 
+	 *
 	 * @param values
 	 */
 	@Override
@@ -184,7 +182,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 按HQL查询对象列表.
-	 * 
+	 *
 	 * @param values 命名参数,按名称绑定.
 	 */
 	@Override
@@ -194,7 +192,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 按HQL查询唯一对象.
-	 * 
+	 *
 	 * @param values
 	 */
 	@Override
@@ -204,7 +202,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 按HQL查询唯一对象.
-	 * 
+	 *
 	 * @param values 命名参数,按名称绑定.
 	 */
 	@Override
@@ -214,7 +212,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 按Criteria查询对象列表.
-	 * 
+	 *
 	 * @param criterions
 	 */
 	@Override
@@ -224,7 +222,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 按Criteria查询唯一对象.
-	 * 
+	 *
 	 * @param criterions
 	 */
 	@Override
@@ -234,7 +232,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 执行HQL操作.
-	 * 
+	 *
 	 * @param values
 	 * @return 更新记录数.
 	 */
@@ -245,7 +243,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 执行HQL操作.
-	 * 
+	 *
 	 * @param values
 	 * @return 更新记录数.
 	 */
@@ -256,7 +254,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 按HQL查询对象列表.
-	 * 
+	 *
 	 * @param params
 	 */
 	public <X> List<X> findListObject(final String hql, final Object... params) {
@@ -265,17 +263,16 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 按HQL查询对象列表.
-	 * 
+	 *
 	 * @param params
 	 */
-	public <X> List<X> findListObject(final String hql,
-			final Map<String, ?> params) {
+	public <X> List<X> findListObject(final String hql, final Map<String, ?> params) {
 		return createQuery(hql, params).list();
 	}
 
 	/**
 	 * 按HQL查询唯一对象.
-	 * 
+	 *
 	 * @param params 数量可变的参数,按顺序绑定.
 	 */
 	public <X> X findUniqueObject(final String hql, final Object... params) {
@@ -284,17 +281,16 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 按HQL查询唯一对象.
-	 * 
+	 *
 	 * @param paramMap 命名参数,按名称绑定.
 	 */
-	public <X> X findUniqueObject(final String hql,
-			final Map<String, ?> paramMap) {
+	public <X> X findUniqueObject(final String hql, final Map<String, ?> paramMap) {
 		return (X) createQuery(hql, paramMap).uniqueResult();
 	}
 
 	/**
 	 * 根据Criterion条件创建Criteria.
-	 * 
+	 *
 	 * @param criterions
 	 */
 	private Criteria createCriteria(final Criterion... criterions) {
@@ -307,7 +303,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 根据查询HQL与参数列表创建Query对象.
-	 * 
+	 *
 	 * @param values
 	 */
 	private Query createQuery(final String hql, final Object... values) {
@@ -323,7 +319,7 @@ public abstract class BasicDaoImpl<T, ID extends Serializable> implements
 
 	/**
 	 * 根据查询HQL与参数列表创建Query对象.
-	 * 
+	 *
 	 * @param values
 	 */
 	private Query createQuery(final String hql, final Map<String, ?> values) {

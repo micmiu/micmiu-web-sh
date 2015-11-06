@@ -9,9 +9,9 @@ import org.hibernate.Session;
 
 /**
  * 分页查询对象
- * 
- * @author <a href="http://www.micmiu.com">Michael Sun</a>
+ *
  * @param <T>
+ * @author <a href="http://www.micmiu.com">Michael Sun</a>
  */
 public abstract class AbstractPagedQuery<T> {
 
@@ -52,8 +52,7 @@ public abstract class AbstractPagedQuery<T> {
 	}
 
 	/**
-	 * @param rp
-	 *            the rp to set
+	 * @param rp the rp to set
 	 */
 	public void setRows(int rp) {
 		this.rows = rp;
@@ -67,8 +66,7 @@ public abstract class AbstractPagedQuery<T> {
 	}
 
 	/**
-	 * @param page
-	 *            the page to set
+	 * @param page the page to set
 	 */
 	public void setPage(int page) {
 		this.page = page;
@@ -93,8 +91,7 @@ public abstract class AbstractPagedQuery<T> {
 	}
 
 	/**
-	 * @param pQueryResults
-	 *            The queryResults to set.
+	 * @param pQueryResults The queryResults to set.
 	 */
 	public void setQueryResults(List<T> pQueryResults) {
 		this.queryResults = pQueryResults;
@@ -108,8 +105,7 @@ public abstract class AbstractPagedQuery<T> {
 	}
 
 	/**
-	 * @param pTotalCount
-	 *            The totalCount to set.
+	 * @param pTotalCount The totalCount to set.
 	 */
 	public void setTotalCount(long pTotalCount) {
 		this.totalCount = pTotalCount;
@@ -131,13 +127,13 @@ public abstract class AbstractPagedQuery<T> {
 
 	/**
 	 * 构造分页查询语句
-	 * 
+	 *
 	 * @param queryParams
 	 * @param isQueryTotalCount
 	 * @return
 	 */
 	public abstract String buildSQL(HashMap<String, Object> queryParams,
-			boolean isQueryTotalCount);
+									boolean isQueryTotalCount);
 
 	public String getSortName() {
 		return sortName;

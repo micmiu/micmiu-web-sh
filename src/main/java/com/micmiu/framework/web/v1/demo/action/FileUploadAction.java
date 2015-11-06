@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
  * 文件上传
- * 
+ *
  * @author <a href="http://www.micmiu.com">Michael Sun</a>
  */
 @Controller
@@ -24,15 +24,15 @@ public class FileUploadAction {
 
 	private static final String PREFIX = "demo.file";
 
-	@RequestMapping(params = { "method=showForm" })
+	@RequestMapping(params = {"method=showForm"})
 	public String showForm() {
 		return PREFIX + ".upload.form";
 
 	}
 
-	@RequestMapping(params = { "method=upload" }, method = RequestMethod.POST)
+	@RequestMapping(params = {"method=upload"}, method = RequestMethod.POST)
 	public String uploadFile(MultipartFile multFile,
-			RedirectAttributes redirectAttributes) throws Exception {
+							 RedirectAttributes redirectAttributes) throws Exception {
 		if (multFile.isEmpty()) {
 			System.out.println(">>>>> file is empty");
 			return "404";
@@ -50,17 +50,17 @@ public class FileUploadAction {
 
 	}
 
-	@RequestMapping(params = { "method=showUploadifyForm" })
+	@RequestMapping(params = {"method=showUploadifyForm"})
 	public String showUploadifyForm() {
 		return PREFIX + ".uploadify.form";
 
 	}
 
-	@RequestMapping(params = { "method=uploadify" }, method = RequestMethod.POST)
+	@RequestMapping(params = {"method=uploadify"}, method = RequestMethod.POST)
 	@ResponseBody
 	public String uploadify(MultipartFile multFile,
-			MultipartHttpServletRequest multReq,
-			RedirectAttributes redirectAttributes) throws Exception {
+							MultipartHttpServletRequest multReq,
+							RedirectAttributes redirectAttributes) throws Exception {
 		System.out.println("-----------------------------------");
 		System.out.println("multFile" + multFile);
 		System.out.println("multReq" + multReq);

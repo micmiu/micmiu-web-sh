@@ -14,9 +14,8 @@ import com.micmiu.framework.web.v1.base.entity.IdEntity;
 import com.micmiu.modules.json.jackson.CustomDateSerializer;
 
 /**
- * 
  * 用户.
- * 
+ *
  * @author <a href="http://www.micmiu.com">Michael Sun</a>
  */
 @Entity

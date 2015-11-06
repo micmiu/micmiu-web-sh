@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = "/demo/constant.do")
 public class ConstantAction {
 
-	@RequestMapping(params = { "method=getSelectList" })
+	@RequestMapping(params = {"method=getSelectList"})
 	@ResponseBody
 	public List<DeptVo> getSelectList() {
 		List<DeptVo> volist = new ArrayList<DeptVo>();

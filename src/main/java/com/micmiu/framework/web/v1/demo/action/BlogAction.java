@@ -16,9 +16,8 @@ import com.micmiu.framework.web.v1.demo.vo.BlogQuery;
 
 /**
  * 博客演示基本的CRUD
- * 
+ *
  * @author <a href="http://www.micmiu.com">Michael Sun</a>
- * 
  */
 @Controller
 @RequestMapping(value = "/demo/blog.do")

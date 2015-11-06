@@ -12,9 +12,8 @@ import com.micmiu.framework.web.v1.demo.service.BlogService;
 
 /**
  * datagrid demo
- * 
+ *
  * @author <a href="http://www.micmiu.com">Michael Sun</a>
- * 
  */
 @Controller
 @RequestMapping(value = "/demo/datagrid.do")
@@ -25,21 +24,21 @@ public class DatagridAction {
 	@Autowired
 	private BlogService blogService;
 
-	@RequestMapping(params = { "method=dg4base" })
+	@RequestMapping(params = {"method=dg4base"})
 	public String list4base(Model model) {
 		List<Blog> list = blogService.findAll();
 		model.addAttribute("blogs", list);
 		return PREFIX + ".blog.list.base";
 	}
 
-	@RequestMapping(params = { "method=dg4tb" })
+	@RequestMapping(params = {"method=dg4tb"})
 	public String list4tb(Model model) {
 		List<Blog> list = blogService.findAll();
 		model.addAttribute("blogs", list);
 		return PREFIX + ".blog.list.tb";
 	}
 
-	@RequestMapping(params = { "method=dg4export" })
+	@RequestMapping(params = {"method=dg4export"})
 	public String list4export(Model model) {
 		List<Blog> list = blogService.findAll();
 		model.addAttribute("blogs", list);

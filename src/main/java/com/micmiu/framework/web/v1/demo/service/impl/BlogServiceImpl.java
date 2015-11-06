@@ -10,12 +10,10 @@ import com.micmiu.framework.web.v1.demo.entity.Blog;
 import com.micmiu.framework.web.v1.demo.service.BlogService;
 
 /**
- * 
  * @author <a href="http://www.micmiu.com">Michael Sun</a>
  */
 @Service("blogService")
-public class BlogServiceImpl extends BasicServiceImpl<Blog, Long> implements
-		BlogService {
+public class BlogServiceImpl extends BasicServiceImpl<Blog, Long> implements BlogService {
 
 	private BlogDao blogDao;
 

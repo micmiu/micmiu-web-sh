@@ -2,7 +2,7 @@ package com.micmiu.framework.web.v1.dao;
 
 /**
  * 分页 参数
- * 
+ *
  * @author <a href="http://www.micmiu.com">Michael Sun</a>
  */
 public class Page {
@@ -26,7 +26,6 @@ public class Page {
 
 	/**
 	 * 构造方法 ,默认每页20条记录,显示第一页
-	 * 
 	 */
 	public Page() {
 		pageSize = DEFAULT_PAGESIZE; // 每页大小
@@ -35,9 +34,9 @@ public class Page {
 
 	/**
 	 * 构造方法
-	 * 
+	 *
 	 * @param pageSize 每页记录数
-	 * @param page 本页页号
+	 * @param page     本页页号
 	 */
 	public Page(final int pageSize, final int page) {
 		this.pageSize = pageSize; // 每页大小
@@ -46,8 +45,8 @@ public class Page {
 
 	/**
 	 * 构造方法 ,默认每页20条记录
-	 * 
-	 * @param page  本页页号
+	 *
+	 * @param page 本页页号
 	 */
 	public Page(final int page) {
 		pageSize = DEFAULT_PAGESIZE; // 每页大小
@@ -56,9 +55,8 @@ public class Page {
 
 	/**
 	 * 分页初始化
-	 * 
-	 * @param nCount
-	 *            总的记录数
+	 *
+	 * @param nCount 总的记录数
 	 */
 	public void init(final int nCount) {
 		init(nCount, pageSize, page);
@@ -66,13 +64,10 @@ public class Page {
 
 	/**
 	 * 分页初始化；记录总记录数，每页记录数，当前页，并计算总页数、本页大小和检测当前页是否有效
-	 * 
-	 * @param nCount
-	 *            总的记录数
-	 * @param nPageSize
-	 *            每页记录数
-	 * @param nPage
-	 *            本页页号
+	 *
+	 * @param nCount    总的记录数
+	 * @param nPageSize 每页记录数
+	 * @param nPage     本页页号
 	 */
 	public void init(final int nCount, final int nPageSize, final int nPage) {
 		count = nCount; // 总的项数
@@ -96,7 +91,7 @@ public class Page {
 
 	/**
 	 * 计算起始记录下标(MySql从0开始)
-	 * 
+	 *
 	 * @return
 	 */
 	public int min() {
@@ -112,9 +107,8 @@ public class Page {
 
 	/**
 	 * 计算导航页(开始页号)
-	 * 
-	 * @param nPageNav
-	 *            导航页数
+	 *
+	 * @param nPageNav 导航页数
 	 * @return 开始页号
 	 */
 	public final int CalcMinPage(final int nPageNav) {
@@ -135,9 +129,8 @@ public class Page {
 
 	/**
 	 * 计算导航页(结束页号)
-	 * 
-	 * @param nPageNav
-	 *            导航页数
+	 *
+	 * @param nPageNav 导航页数
 	 * @return 结束页号
 	 */
 	public final int CalcMaxPage(final int nPageNav) {

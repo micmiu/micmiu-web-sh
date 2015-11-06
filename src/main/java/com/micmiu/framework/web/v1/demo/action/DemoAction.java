@@ -8,7 +8,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.micmiu.framework.web.v1.demo.vo.FormBean;
 
 /**
- * 
  * @author <a href="http://www.micmiu.com">Michael Sun</a>
  */
 @Controller
@@ -23,14 +22,14 @@ public class DemoAction {
 
 	}
 
-	@RequestMapping(params = { "method=showForm" })
+	@RequestMapping(params = {"method=showForm"})
 	public String showForm(FormBean bean) {
 
 		return PREFIX + ".form.easyui";
 
 	}
 
-	@RequestMapping(params = { "method=save" })
+	@RequestMapping(params = {"method=save"})
 	@ResponseBody
 	public String save(FormBean bean, RedirectAttributes redirectAttributes) {
 		System.out.println("--->:" + bean);

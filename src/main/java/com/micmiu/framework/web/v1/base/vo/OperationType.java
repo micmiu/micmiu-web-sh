@@ -5,9 +5,7 @@ import java.util.Map;
 import com.google.common.collect.Maps;
 
 /**
- * 
  * @author <a href="http://www.micmiu.com">Michael Sun</a>
- * 
  */
 public enum OperationType {
 
