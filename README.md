@@ -1,8 +1,10 @@
 micmiu-web-sh
 ============
 
-Michael designed for J2EE development framework .
+目前暂停更新，有兴趣的可以参考最新的开发框架演示项目：https://github.com/micmiu/ferriswheel。
 
+
+Michael designed for J2EE development framework .
 
 Technical Summary :
 ------------------
